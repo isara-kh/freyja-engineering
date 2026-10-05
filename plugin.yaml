@@ -1,0 +1,7 @@
+name: freyja-engineering
+version: 0.1.0
+description: Namespaced Matt Pocock and Superpowers skills with safe manual updates.
+author: Isara Khambut
+license: MIT
+provides_hooks:
+  - pre_llm_call

@@ -1,0 +1,19 @@
+---
+name: matt-implement
+description: "Implement a piece of work based on a spec or set of tickets."
+disable-model-invocation: true
+---
+
+## Freyja / Hermes compatibility
+
+This is the `matt`-namespaced adaptation of the upstream `matt-implement` skill. Use Hermes-native tools and syntax; invoke sibling skills by their fully qualified `freyja-engineering:<skill-slug>` name. Do not assume a generic `Skill` tool exists. Honor current user authorization and do not expose secrets in logs, output, or artifacts.
+
+Implement the work described by the user in the spec or tickets.
+
+Use /tdd where possible, at pre-agreed seams.
+
+Run typechecking regularly, single test files regularly, and the full test suite once at the end.
+
+Once done, use /code-review to review the work.
+
+Commit your work to the current branch.

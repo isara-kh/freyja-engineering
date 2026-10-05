@@ -1,0 +1,68 @@
+{
+  "sidecar_signatures": {
+    "matt:skills/engineering/improve-codebase-architecture:HTML-REPORT.md": {
+      "anchor": "The architectural review is rendered as a single self-contained HTML file in the OS temp directory.",
+      "count": 1,
+      "sha256": "daa9c2437ede5dcc426de33b86e59af7cc4882de11165a204fca1b116a6f59a4"
+    },
+    "matt:skills/engineering/wizard:template.sh": {
+      "anchor": "write_env() {",
+      "count": 1,
+      "sha256": "a7e7fe908ff147e25022da716ac2ebc7e65250642e81615dc752e221b8f68252"
+    },
+    "matt:skills/engineering/wizard:template.sh#secret": {
+      "anchor": "set_secret() {",
+      "count": 1,
+      "sha256": "a62ac4d39717df037418df5e123bae291ef14f49fbeef9859b9233ed71a8cf4e"
+    },
+    "matt:skills/engineering/wizard:template.sh#variable": {
+      "anchor": "set_var() {",
+      "count": 1,
+      "sha256": "353ae00f45727a45b44eaf6d58ebc74b564b52a2fd74144f9c3e93543d381322"
+    },
+    "superpowers:skills/finishing-a-development-branch:SKILL.md": {
+      "anchor": "**If `WORKTREE_PATH` is under `.worktrees/` or `worktrees/`:** Superpowers",
+      "count": 1,
+      "sha256": "0276bcf305f1656775b52e87c9b537284de50bf22f023e9b715f3b67938e0560"
+    },
+    "superpowers:skills/using-superpowers:references/hermes-tools.md": {
+      "anchor": "| Dispatch a subagent | `delegate_task(goal=..., context=..., toolsets=[...], role=\"leaf\")` |",
+      "count": 1,
+      "sha256": "8ade489988a6ae90530c1e17fd65c54032afaad3380b96e3e779ce86d45cca09"
+    }
+  },
+  "adapter_version": 1,
+  "signatures": {
+    "matt:skills/engineering/improve-codebase-architecture": {
+      "anchor": "The report uses **Tailwind via CDN** for layout and styling, and **Mermaid via CDN** for diagrams where a graph/flow/sequence reliably communicates the structure. Mix Mermaid with hand-crafted CSS/SVG visuals: use Mermaid when relationships are graph-shaped (call graphs, dependencies, sequences), and hand-built divs/SVG when you want something more editorial (mass diagrams, cross-sections, collapse animations). Each candidate gets a **before/after visualisation**. Be visual.",
+      "count": 1,
+      "sha256": "9ca9e1a137d90c367b909b0f466625277b4c19e55083716216e64287e0700a3c",
+      "replacement": "The report is a self-contained local HTML document: use inline CSS and SVG for diagrams, never fetch Tailwind or Mermaid from a remote CDN. Escape every untrusted project-derived string before inserting it into HTML or SVG. If Mermaid syntax is useful, render it as escaped plain text rather than loading remote or unreviewed JavaScript. Keep diagram text readable and static."
+    },
+    "matt:skills/engineering/wizard": {
+      "anchor": "use `ask_secret` for anything secret",
+      "count": 1,
+      "sha256": "6531ff7ab9fa7afb7349731a1b35d57fd189d956a511e701a7c46cf2240fbd78"
+    },
+    "matt:skills/engineering/wizard#2": {
+      "anchor": "write_env` every persisted value",
+      "count": 1,
+      "sha256": "2f8f3684333577b5c5df68bc8031310e513497c41b549d2c95374931b4f62a1a"
+    },
+    "sp:skills/systematic-debugging": {
+      "anchor": "   echo \"=== Secrets available in workflow: ===\"",
+      "count": 1,
+      "sha256": "549f30f319742bf56b566c48bc6ab55f7138dede301d0af4b8d4ffc9fdf33698"
+    },
+    "sp:skills/subagent-driven-development": {
+      "anchor": "delete this plan's workspace (`rm -rf <workspace>`) \u2014 the git history is",
+      "count": 1,
+      "sha256": "aaa8182ead94744f39aae63f567b6ddcbb82c4c87e460175fd062e5b791173d5"
+    },
+    "sp:skills/systematic-debugging#identity-env": {
+      "anchor": "env | grep IDENTITY || echo \"IDENTITY not in environment\"",
+      "count": 1,
+      "sha256": "21dbb7dd7bc1a42b5a1432b52e9f19e42f1d97c1cae8ba7d3e84ebd79cf1392d"
+    }
+  }
+}
