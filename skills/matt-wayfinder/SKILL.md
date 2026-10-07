@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 ## Freyja / Hermes compatibility
 
-This is the `matt`-namespaced adaptation of the upstream `matt-wayfinder` skill. Use Hermes-native tools and syntax; invoke sibling skills by their fully qualified `freyja-engineering:<skill-slug>` name. Do not assume a generic `Skill` tool exists. Honor current user authorization and do not expose secrets in logs, output, or artifacts.
+This is the `matt`-namespaced adaptation of the upstream `matt-wayfinder` skill. Use Hermes-native tools and syntax; invoke sibling skills by their fully qualified `freyja-engineering:<skill-slug>` name. Do not assume a generic `Skill` tool exists. Interview and grilling skills (`matt-grill-me`, `matt-grilling`, `matt-grill-with-docs`) are explicit opt-in only: never auto-load them before implement or brainstorming, and never treat a meta question about grilling as a request. Honor current user authorization and do not expose secrets in logs, output, or artifacts.
 
 A loose idea has arrived, too big for one agent session, and wrapped in fog: the way from here to the **destination** isn't visible yet. Wayfinding is about finding that way, not charging at the destination. This skill charts the way as a **shared map** on the repo's issue tracker, then works its **decision tickets** (questions whose resolution is a decision, not slices of a build to execute) one at a time until the route is clear.
 

@@ -13,7 +13,7 @@ Use when the user explicitly asks for Freyja engineering, or requests a bundled 
 
 ## Procedure
 
-1. State the scope and plan briefly. For unclear ideas/decisions, optionally load `freyja-engineering:matt-grill-me` and its `matt-grilling` dependency. Facts are retrieved with tools; decisions remain with the user. Don't repeat settled interviews.
+1. State the scope and plan briefly. Load `freyja-engineering:matt-grill-me` (and its `matt-grilling` dependency) ONLY when the user explicitly asks for grilling (e.g. "grill me about X", "/grill-me"). Never auto-start grilling before implement/brainstorming, and never treat a meta question about grilling as a request. Facts are retrieved with tools; decisions remain with the user. Don't repeat settled interviews.
 2. For building/design work load `freyja-engineering:sp-brainstorming`. Follow the selected path approval gate before implementation. Architectural designs proceed to `freyja-engineering:sp-writing-plans`; bounded work has a shorter in-chat design. Ordinary personal-assistant or educational questions do not require this pipeline.
 3. Select one execution path: `sp-executing-plans` for inline work, or `sp-subagent-driven-development` for bounded delegated tasks. Do not concurrently start Matt implement-spec for the same work. User approval of already-scoped low-risk edits need not be requested per edit.
 4. Use qualified TDD/review/debug skills for an explicit bundled task and don't stack conflicting local versions for one stage. `sp-receiving-code-review` evaluates feedback; `sp-verification-before-completion` requires real evidence.

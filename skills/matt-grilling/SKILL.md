@@ -5,7 +5,7 @@ description: Grill the user relentlessly about a plan, decision, or idea. Use wh
 
 ## Freyja / Hermes compatibility
 
-This is the `matt`-namespaced adaptation of the upstream `matt-grilling` skill. Use Hermes-native tools and syntax; invoke sibling skills by their fully qualified `freyja-engineering:<skill-slug>` name. Do not assume a generic `Skill` tool exists. Honor current user authorization and do not expose secrets in logs, output, or artifacts.
+This is the `matt`-namespaced adaptation of the upstream `matt-grilling` skill. Use Hermes-native tools and syntax; invoke sibling skills by their fully qualified `freyja-engineering:<skill-slug>` name. Do not assume a generic `Skill` tool exists. Interview and grilling skills (`matt-grill-me`, `matt-grilling`, `matt-grill-with-docs`) are explicit opt-in only: never auto-load them before implement or brainstorming, and never treat a meta question about grilling as a request. Honor current user authorization and do not expose secrets in logs, output, or artifacts.
 
 Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it.
 

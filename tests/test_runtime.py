@@ -36,6 +36,24 @@ class RuntimeTests(unittest.TestCase):
         guidance, _ = self.api()
         self.assertIsNone(guidance('How do I clean my grill?'))
 
+    def test_meta_question_about_grill_trigger_does_not_fire(self):
+        guidance, _ = self.api()
+        self.assertIsNone(guidance('why implement always invoke grill me ?'))
+
+    def test_what_is_grill_question_does_not_fire(self):
+        guidance, _ = self.api()
+        self.assertIsNone(guidance('what is grill me mode?'))
+
+    def test_explicit_grill_me_about_request_triggers(self):
+        guidance, _ = self.api()
+        result = guidance('Can you grill me about my CFA plan?')
+        self.assertIn('freyja-engineering:matt-grill-me', result)
+
+    def test_bare_leading_grill_me_triggers(self):
+        guidance, _ = self.api()
+        result = guidance('grill me')
+        self.assertIn('freyja-engineering:matt-grill-me', result)
+
     def test_inventory_qualifies_folders_and_does_not_replace_local_names(self):
         _, discover = self.api()
         with TemporaryDirectory() as directory:

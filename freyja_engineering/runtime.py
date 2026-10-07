@@ -6,13 +6,25 @@ from typing import List, Optional, Tuple
 
 NAMESPACE = 'freyja-engineering'
 
+# Grilling fires only on explicit requests, never on meta discussion.
+# Bare "grill me" inside a question about implement/trigger behavior
+# (e.g. "why implement always invoke grill me?") must stay silent.
+_GRILL_REQUEST = re.compile(
+    r'(?:^\s*(?:please\s+)?/?grill[ -]me\b'
+    r'|\bgrill[ -]me\s+(?:about|on|for)\b'
+    r'|\bplease\s+grill[ -]me\b'
+    r'|\b(?:can|could|would|will)\s+you\s+(?:please\s+)?grill[ -]me\b'
+    r'|(?:^|\s)/grill-me\b'
+    r'|\bfreyja-engineering:matt-grill-me\b)'
+)
+
 
 def guidance_for_message(message: str) -> Optional[str]:
     """Recognize explicit opt-in, not inferred intent from arbitrary private data."""
     if not isinstance(message, str):
         return None
     lowered = message.lower()
-    if re.search(r'\bgrill[ -]me\b', lowered):
+    if _GRILL_REQUEST.search(lowered):
         return ('The user requested grilling. Load skill_view(name="freyja-engineering:matt-grill-me"). '
                 'Use it for this decision only; do not start a coding pipeline or take action without approval.')
     if re.search(r'\b(?:use|using|enable|start) freyja[ -]engineering\b', lowered) or lowered.startswith('/engineering-mode'):

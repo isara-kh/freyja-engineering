@@ -5,7 +5,7 @@ description: Writing documents for agents. Use when creating or editing skills, 
 
 ## Freyja / Hermes compatibility
 
-This is the `matt`-namespaced adaptation of the upstream `matt-writing-for-agents` skill. Use Hermes-native tools and syntax; invoke sibling skills by their fully qualified `freyja-engineering:<skill-slug>` name. Do not assume a generic `Skill` tool exists. Honor current user authorization and do not expose secrets in logs, output, or artifacts.
+This is the `matt`-namespaced adaptation of the upstream `matt-writing-for-agents` skill. Use Hermes-native tools and syntax; invoke sibling skills by their fully qualified `freyja-engineering:<skill-slug>` name. Do not assume a generic `Skill` tool exists. Interview and grilling skills (`matt-grill-me`, `matt-grilling`, `matt-grill-with-docs`) are explicit opt-in only: never auto-load them before implement or brainstorming, and never treat a meta question about grilling as a request. Honor current user authorization and do not expose secrets in logs, output, or artifacts.
 
 Reference for writing any document an agent consumes: a skill, an `AGENTS.md` / `CLAUDE.md`, a doc reached by a pointer. The packaging differs; the writing does not: the same levers make each one predictable, since the agent takes the same _process_ every run rather than producing the same output.
 
