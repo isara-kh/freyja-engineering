@@ -1,6 +1,6 @@
 # Freyja Engineering implementation specification
 
-Approved user scope: custom native Hermes plugin bundling ALL 27 promoted Matt Pocock skills and ALL 15 Superpowers skills, compatible adaptations, manual check/update/rollback, no cron, preserve current profile skills, install default profile after tests, publish private GitHub repo isara-kh/freyja-engineering at end. Work source: /Users/arasi/Projects/freyja-engineering. Runtime plugin will be copied to HERMES_HOME/plugins/freyja-engineering only after verification. User authorized private repo creation/push. No user project mutations, account exports, code-framework installations or external development-workflow writes.
+Approved user scope: custom native Hermes plugin bundling ALL 27 promoted Matt Pocock skills and ALL 15 Superpowers skills, compatible adaptations, manual check/update/rollback, no cron, preserve current profile skills, install default profile after tests, publish private GitHub repo isara-kh/freyja-engineering at end. Work source: a local checkout of this repository. Runtime plugin will be copied to HERMES_HOME/plugins/freyja-engineering only after verification. User authorized private repo creation/push. No user project mutations, account exports, code-framework installations or external development-workflow writes.
 
 ## Shared modules/interfaces (do not change without notifying parent)
 
